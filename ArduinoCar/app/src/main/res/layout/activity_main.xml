@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circuit_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/up"
+            android:layout_width="75dp"
+            android:layout_height="125dp"
+            android:layout_above="@+id/right"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/up"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/down"
+            android:layout_width="75dp"
+            android:layout_height="125dp"
+            android:layout_below="@+id/right"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/down"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="125dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/right"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="125dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/up"
+            android:background="@drawable/left"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:text="@string/button_start" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="338dp"
+            android:layout_height="77dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/background_light"
+            android:padding="10px"
+            android:text="Readings:"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+</android.support.constraint.ConstraintLayout>

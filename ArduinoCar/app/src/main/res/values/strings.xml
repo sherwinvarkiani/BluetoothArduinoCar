@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Arduino Car</string>
+    <string name="button_up">UP</string>
+    <string name="button_left">LEFT</string>
+    <string name="button_down">DOWN</string>
+    <string name="button_right">RIGHT</string>
+    <string name="button_start">START</string>
+</resources>
